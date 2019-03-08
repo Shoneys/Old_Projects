@@ -1,0 +1,33 @@
+Asymptotic Complexity:
+    void insert(int number):
+        O(1(create templist)+2(list.length(copy+paste list))+1(size++))
+    int get(int i):
+        O(1(return list[i])
+    int size():
+        O(1(return size))
+
+Compilation Completion Time:
+    i7-7500U @ 70degrees C: @ 580MHz = 3.526s, 5.26s, 6.284s (system tasks are prioritized in clock cycle)
+                            @ 1.7GHz = .927s, .930s, .988s
+                            @ 3.5GHZ = .471s, .474s, .502s, .964s, .484s, .473s
+    Real world running time depends on how quickly energy can be transferred between bits?
+        How quickly this "single-threaded" application runs depends on 1.) Clock speed (frequency in hertz) 2.) Ambient and Core Temperature 3.) Task priority
+
+My implementation is, to my understanding, the best for efficient approximate matching. It checks to see if the new number
+is smaller than the current smallest value. Rather than copying everything from both lists, it just shifts the list,
+past the position of the number to be inserted, to the right one, then inserts the number.
+
+
+
+I tried the node method with head, tail, and current; but it was too complex.
+
+//myList.add(System.identityHashCode(number)); code for potential associative array?
+
+/*
+my best attempt without googling stuff:
+ if (list[i] > list[i + 1]) {
+ temp = list[i];
+ list[i] = list[i + 1];
+ list[i + 1] = temp;
+ }
+*/
