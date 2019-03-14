@@ -1,6 +1,6 @@
 Asymptotic Complexity:
     void insert(int number):
-        O(1(create templist)+2(list.length(copy+paste list))+1(size++))
+        O(1(create templist)+2n(list.length(copy+paste list))+1(size++))= O(n)
     int get(int i):
         O(1(return list[i])
     int size():
